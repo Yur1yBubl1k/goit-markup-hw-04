@@ -110,7 +110,7 @@ html {
 .hero {
   background-color: var(--primary-text-color);
   padding-bottom: 188px;
-  height: 600px;
+  /* height: 600px; */
 }
 .hero-but {
   padding: 16px 32px 16px 32px;
@@ -125,7 +125,7 @@ html {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid tomato;
+  
   /* background-image:  */
   background-image: linear-gradient(
       to right,
@@ -379,23 +379,46 @@ html {
 }
 
 .company-link {
-  border: 2px solid #afb1b8;
+  /* border: 1px solid #afb1b8;
+  padding: 16px 32px; 
+  /* border-radius: 4px;  */
+  cursor: pointer;
+}
+/* .company-link:hover,
+.company-link:focus {
+  border-color: #404bbf;
+  fill:#404bbf ;
+} */
+
+.company-btn {
+  display: flex;
+  border: 1px solid #afb1b8;
   padding: 16px 32px;
   border-radius: 4px;
 }
-.company-link:hover,
-.company-link:focus {
+
+/* .company-btn:hover, 
+.company-btn:focus, 
+.company-img:hover, 
+.company-img:focus {
+  border-color: #404bbf;
+  fill: #404bbf; 
+ } */
+
+.company-btn:is(:hover, :focus) {
   border-color: #404bbf;
 }
+.company-btn:is(:hover, :focus) .company-img {
+  fill: #404bbf;
+}
+
 
 .company-img {
   fill: #8e8f99;
+  display: flex;
 }
 
-.company-img:hover,
-.company-img:focus {
-  fill: #404bbf;
-}
+
 
 /* Footer */
 .footer {
@@ -459,10 +482,11 @@ html {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
+.footer-button-soc:hover,
+.footer-button-soc:focus {
   background-color: #31d0aa;
-  border-radius: 50%;
+
+  
 }
 
 .foot-media {
